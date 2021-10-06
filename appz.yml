@@ -1,0 +1,30 @@
+app:
+    name: Sample Dotnet App
+    code: SampleDotnetApp
+    notify: aborra@ecloudcontrol.com
+    
+build:
+    version: 3.1
+    env: DEV
+    build_file: none
+    args:
+      BUILD_DIR: /src
+      PROJECT_PATH: /PostgreSqlDotnetCore/PostgreSqlDotnetCore.csproj
+      NUGET_CONFIG: /Nuget.Config
+      #SONAR_TOKEN: $${build.token.sonar}
+      #SONAR_HOST_URL: https://anushab7-dev-sonarqube-8-2.038ecc66.lowtouch.cloud
+      #SONAR_PROJECT_KEY: DotNetProject
+      SONARQUBE: disabled
+    output_files: output/*.zip
+    image_template: dotnet-3.1
+    
+deploy:
+    context: anushab7/DEV
+    replicas: 1
+    port:
+    - 80
+    
+properties:
+   ASPNETCORE_ENVIRONMENT: Development
+   DLL: PostgreSqlDotnetCore.dll
+   revision: 27
