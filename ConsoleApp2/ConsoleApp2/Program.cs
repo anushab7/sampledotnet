@@ -21,7 +21,7 @@ namespace ConsoleApp2
                 //var conn = "mongodb+srv://systemuser_dev:ZwDjihzJzjRf44wgPMWJ@cluster0.kyanl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
                 var conn = "mongodb://systemuserdev:f7Cbd42405M8mGnjFswk@mongodb-4-4:27017";
 
-                var database = new MongoClient(conn).GetDatabase("McLarenDev");
+                var database = new MongoClient(conn).GetDatabase("Test");
                 var collection = database.GetCollection<Student>("Logs");
 
                 collection.InsertOne(new Student() { Id = 3, Name = "Prasad" });
