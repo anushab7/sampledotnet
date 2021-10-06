@@ -8,8 +8,8 @@ build:
     env: DEV
     build_file: none
     args:
-      BUILD_DIR: /src
-      PROJECT_PATH: /PostgreSqlDotnetCore/PostgreSqlDotnetCore.csproj
+      BUILD_DIR: /ConsoleApp2
+      PROJECT_PATH: /ConsoleApp2/ConsoleApp2.csproj
       NUGET_CONFIG: /Nuget.Config
       #SONAR_TOKEN: $${build.token.sonar}
       #SONAR_HOST_URL: https://anushab7-dev-sonarqube-8-2.038ecc66.lowtouch.cloud
@@ -26,5 +26,5 @@ deploy:
     
 properties:
    ASPNETCORE_ENVIRONMENT: Development
-   DLL: PostgreSqlDotnetCore.dll
+   DLL: ConsoleApp2.dll
    revision: 27
